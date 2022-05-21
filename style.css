@@ -78,6 +78,13 @@ strong {
   padding:  5px;
   border-radius: 3px;
 }
+button {
+  cursor: pointer;
+
+}
+button:active {
+  transform:scale(1.07)
+}
 .info {
   margin-left: 1.5rem;
   display: flex;
@@ -154,6 +161,9 @@ select {
   width: 20px;
   margin-top: 1rem;
 }
+.dis {
+  display: none;
+}
 .total {
   border-top: 1px solid #828282;
   display: flex;
@@ -162,26 +172,25 @@ select {
   margin: .3rem 1rem;
 }}
 @media only screen and (max-width: 540px) {
-
-.container {
-  grid-template-columns: 100%;
-        width: 90%;
-        grid-template-rows: 400px 1fr;
-        grid-template-areas: "top" "bottom";
+  
+  .container {
+    grid-template-columns: 100%;
+    width: 90%;
+    grid-template-rows: 400px 1fr;
+    grid-template-areas: "top" "bottom";
+  }
+  main form {
+    width: 85% !important;
+    left: 0;
+    transform: unset;
+    margin-right: 0 !important;
+  }
+  form {
+    grid-area: bottom;
+  }
+  .products {
+    width: 100%;
+    grid-area: top;
+  }
+  
 }
-main form {
-  width: 85% !important;
-  left: 0;
-  transform: unset;
-  margin-right: 0 !important;
-}
-form {
-  grid-area: bottom;
-}
-.products {
-  width: 100%;
-        grid-area: top;
-}
-
-}
-

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-@media only screen and (max-width: 1450px) {
+
 header h1 {
   text-align: center;
   margin-top: 15px;
@@ -170,8 +170,8 @@ select {
   justify-content: space-between;
   line-height: 1.5rem;
   margin: .3rem 1rem;
-}}
-@media only screen and (max-width: 540px) {
+}
+@media only screen and (max-width: 768px) {
   
   .container {
     grid-template-columns: 100%;
@@ -180,17 +180,23 @@ select {
     grid-template-areas: "top" "bottom";
   }
   main form {
-    width: 85% !important;
+    max-width:400px;
+    width: 100% !important;
     left: 0;
     transform: unset;
     margin-right: 0 !important;
+    min-width:300px;
   }
   form {
     grid-area: bottom;
   }
   .products {
+    max-width: 400px;
     width: 100%;
+    min-width:300px;
     grid-area: top;
   }
-  
+  .form input {
+    width: 100%;
+  }
 }
